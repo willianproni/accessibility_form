@@ -1,6 +1,6 @@
 function Logo() {
   return (
-    <strong className="flex items-center gap-2 text-xl font-semibold text-zinc-900">
+    <strong className="mx-1 flex items-center gap-2 text-xl font-semibold text-zinc-900">
     <svg
       width={53}
       height={39}
