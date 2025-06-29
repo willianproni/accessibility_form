@@ -18,10 +18,16 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <button className="px-4 py-2 text-sm bg-white text-zinc-700 font-semibold border border-zinc-300 rounded-lg shadow-sm hover:bg-zinc-50">
+            <button
+              type="button"
+              className="px-4 py-2 text-sm bg-white text-zinc-700 font-semibold border border-zinc-300 rounded-lg shadow-sm hover:bg-zinc-50"
+            >
               Cancel
             </button>
-            <button className="px-4 py-2 text-sm bg-violet-600 text-zinc-50 font-semibold rounded-lg shadow-sm hover:bg-violet-700">
+            <button
+              type="submit"
+              className="px-4 py-2 text-sm bg-violet-600 text-zinc-50 font-semibold rounded-lg shadow-sm hover:bg-violet-700"
+            >
               Save
             </button>
           </div>
@@ -51,7 +57,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-form gap-3">
+          <div className="grid grid-cols-form gap-3 pb-5">
             <label
               htmlFor="email"
               className="text-sm font-medium text-zinc-700"
@@ -71,6 +77,94 @@ export default function Home() {
                 />
               </Input.InputRoot>
             </div>
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pb-5">
+            <label
+              htmlFor="yourPhoto"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Your Photo
+              <span className="block mt-0.5 text-sm font-normal text-zinc-500">
+                This will be displayed on your profile.
+              </span>
+            </label>
+
+            <div></div>
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pb-5">
+            <label htmlFor="role" className="text-sm font-medium text-zinc-700">
+              Role
+            </label>
+
+            <div>
+              <Input.InputRoot>
+                <Input.InputControl
+                  id="role"
+                  placeholder="Software developer..."
+                />
+              </Input.InputRoot>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pb-5">
+            <label
+              htmlFor="country"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Country
+            </label>
+
+            <div></div>
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pb-5">
+            <label
+              htmlFor="timezone"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Timezone
+            </label>
+
+            <div></div>
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pb-5">
+            <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
+              Bio
+              <span className="block mt-0.5 text-sm font-normal text-zinc-500">
+                Write a short introdiction.
+              </span>
+            </label>
+
+            <div></div>
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pb-5">
+            <label
+              htmlFor="projects"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Portfolio project
+              <span className="block mt-0.5 text-sm font-normal text-zinc-500">
+                Share a few snippets of your work.
+              </span>
+            </label>
+
+            <div></div>
+          </div>
+
+          <div className="flex justify-end items-center gap-2">
+            <button
+              type="button"
+              className="px-4 py-2 text-sm bg-white text-zinc-700 font-semibold border border-zinc-300 rounded-lg shadow-sm hover:bg-zinc-50"
+            >
+              Cancel
+            </button>
+            <button className="px-4 py-2 text-sm bg-violet-600 text-zinc-50 font-semibold rounded-lg shadow-sm hover:bg-violet-700">
+              Save
+            </button>
           </div>
         </form>
       </div>
