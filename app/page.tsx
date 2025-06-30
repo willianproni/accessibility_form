@@ -1,6 +1,6 @@
 import SettingsTabs from "./components/SettingsTabs/SettingsTabs";
 import * as Input from "./components/Input";
-import { Mail } from "lucide-react";
+import { Mail, UploadCloud, User } from "lucide-react";
 
 export default function Home() {
   return (
@@ -90,7 +90,34 @@ export default function Home() {
               </span>
             </label>
 
-            <div></div>
+            <div className="flex items-start gap-5">
+              <div className="bg-violet-100 flex h-16 w-16 items-center justify-center rounded-full">
+                <User className="w8 h8 text-violet-500" />
+              </div>
+
+              <label
+                htmlFor="photo"
+                className="group flex-1 cursor-pointer flex flex-col items-center gap-3 rounded-lg border border-zinc-300 px-6 py-4 text-center text-zinc-500 shadow-sm hover:border-violet-200 hover:bg-violet-50 hover:text-violet-500"
+              >
+                <div className="rounded-full border-8 border-zinc-200 bg-zinc-300 p-2 group-hover:border-violet-100 group-hover:bg-violet-200">
+                  <UploadCloud className="h-5 w-5 text-zinc-600 group-hover:text-violet-600" />
+                </div>
+
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-sm">
+                    <span className="font-semibold text-violet-700">
+                      Click to upload
+                    </span>{" "}
+                    or drag and drop
+                  </span>
+                  <span className="text-xs">
+                    SVG, PNG or JPG (max. 800x400px)
+                  </span>
+                </div>
+              </label>
+
+              <input type="file" className="sr-only" id="photo" />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pb-5">
