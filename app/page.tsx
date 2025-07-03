@@ -1,7 +1,21 @@
 import { Mail } from "lucide-react";
+import * as FileInput from "./components/Form/FileInput";
 import * as Input from "./components/Input";
 import SettingsTabs from "./components/SettingsTabs/SettingsTabs";
-import * as FileInput from "./components/Form/FileInput";
+import { Select } from "./components/Form/Select/Select";
+import { SelectItem } from "./components/Form/Select/SelectItem";
+
+const country = [
+  { text: "Brazil", value: "BR" },
+  { text: "United States", value: "US" },
+  { text: "France", value: "FR" },
+];
+
+const timezone = [
+  { text: "America - São Paulo (UTC-03:00)", value: "AM-SP" },
+  { text: "America - São Paulo (UTC-03:00)", value: "AM-DF" },
+  { text: "America - Santigo (UTC-04:00)", value: "AM-ST" },
+];
 
 export default function Home() {
   return (
@@ -121,7 +135,15 @@ export default function Home() {
               Country
             </label>
 
-            <div></div>
+            <Select placeholder="Select a country...">
+              {country.map((item) => (
+                <SelectItem
+                  key={item.value}
+                  value={item.value}
+                  text={item.text}
+                />
+              ))}
+            </Select>
           </div>
 
           <div className="grid grid-cols-form gap-3 pb-5">
@@ -132,7 +154,15 @@ export default function Home() {
               Timezone
             </label>
 
-            <div></div>
+            <Select placeholder="Select a timezone...">
+              {timezone.map((item) => (
+                <SelectItem
+                  key={item.value}
+                  value={item.value}
+                  text={item.text}
+                />
+              ))}
+            </Select>
           </div>
 
           <div className="grid grid-cols-form gap-3 pb-5">
@@ -160,7 +190,7 @@ export default function Home() {
             <FileInput.Root>
               <FileInput.Trigger />
               <FileInput.FileList />
-              
+
               <FileInput.Control multiple />
             </FileInput.Root>
           </div>
