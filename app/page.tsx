@@ -1,9 +1,10 @@
-import { Mail } from "lucide-react";
+import { Bold, Italic, Link, List, ListOrdered, Mail } from "lucide-react";
 import * as FileInput from "./components/Form/FileInput";
-import * as Input from "./components/Input";
-import SettingsTabs from "./components/SettingsTabs/SettingsTabs";
 import { Select } from "./components/Form/Select/Select";
 import { SelectItem } from "./components/Form/Select/SelectItem";
+import { TextArea } from "./components/Form/TextArea/TextArea";
+import * as Input from "./components/Input";
+import SettingsTabs from "./components/SettingsTabs/SettingsTabs";
 
 const country = [
   { text: "Brazil", value: "BR" },
@@ -173,7 +174,57 @@ export default function Home() {
               </span>
             </label>
 
-            <div></div>
+            <div className="space-y-3">
+              <div className="grid gap-3 grid-cols-2">
+                <Select placeholder="" defaultValue="default">
+                  <SelectItem text="Default text" value="default" />
+                  <SelectItem text="Medium text" value="medium" />
+                  <SelectItem text="Small text" value="small" />
+                  <SelectItem text="Large text" value="large" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-200 rounded"
+                  >
+                    <Bold strokeWidth={3} className="h-4 w-4 text-zinc-500" />
+                  </button>
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-200 rounded"
+                  >
+                    <Italic strokeWidth={3} className="h-4 w-4 text-zinc-500" />
+                  </button>
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-200 rounded"
+                  >
+                    <Link strokeWidth={3} className="h-4 w-4 text-zinc-500" />
+                  </button>
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-200 rounded"
+                  >
+                    <List strokeWidth={3} className="h-4 w-4 text-zinc-500" />
+                  </button>
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-200 rounded"
+                  >
+                    <ListOrdered
+                      strokeWidth={3}
+                      className="h-4 w-4 text-zinc-500"
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <TextArea
+                id="bio"
+                defaultValue="I'm a Front end Software Developer based in São Paulo, Brazil. I specialise in React/Next.js and Accessibility, brand strategy, and Webflow development."
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pb-5">
