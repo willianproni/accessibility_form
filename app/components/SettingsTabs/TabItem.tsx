@@ -15,9 +15,11 @@ export const TabItem = ({
   return (
     <Tabs.Trigger
       value={value}
-      className="relative px-1 pb-4 text-sm font-medium text-zinc-500 hover:text-violet-700 data-[state=active]:text-violet-700"
+      className="relative group px-1 pb-4 text-sm font-medium text-zinc-500 hover:text-violet-700 data-[state=active]:text-violet-700 outline-none"
     >
-      <span>{itemName}</span>
+      <span className="rounded group-focus-visible:ring-2 group-focus-visible:ring-violet-400 group-focus-visible:ring-offset-4">
+        {itemName}
+      </span>
 
       {isSelected ? (
         <motion.div
