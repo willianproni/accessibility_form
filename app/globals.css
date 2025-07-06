@@ -16,4 +16,18 @@ body {
 @theme {
   --color-test-500: #f4ff32;
   --grid-template-columns-app: minmax(18rem, 20rem) 1fr;
+  --grid-template-columns-form: minmax(7.5rem, 17.5rem) minmax(25rem, 1fr)
+    minmax(0, 15rem);
+  --animate-slide-in-fade: slide-in-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  @keyframes slide-in-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
