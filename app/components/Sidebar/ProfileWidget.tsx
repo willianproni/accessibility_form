@@ -1,5 +1,6 @@
 import { LogOut } from "lucide-react";
 import Image from "next/image";
+import { Button } from "../Button";
 
 export const ProfileWidget = () => {
   return (
@@ -17,9 +18,9 @@ export const ProfileWidget = () => {
         </span>
         <span className="text-sm text-zinc-500 truncate">@proniwillian </span>
       </div>
-      <button type="button" className="ml-auto p-2  hover:bg-zinc-200 rounded">
+      <Button type="button" variant="ghost">
         <LogOut className="h-5 w-5 text-zinc-500" />
-      </button>
+      </Button>
     </div>
   );
 };
